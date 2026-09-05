@@ -13,7 +13,8 @@
   </p>
 
   <p>
-    <em>Built for <strong>HackBlox 2026</strong> — Web3 Problem 02: Soulbound Certificates.</em>
+    <em>Built for <strong>HackBlox 2026</strong> — Web3 Problem 02: Soulbound Certificates.</em><br />
+    <strong>Team:</strong> Team Rize &nbsp;•&nbsp; <strong>Member:</strong> Jatin Pandey (Solo)
   </p>
 
   <p>
@@ -32,6 +33,7 @@
 
 ## 📑 Table of Contents
 
+- [👥 Team & Submission Information](#-team--submission-information)
 - [1. Executive Summary](#1-executive-summary)
   - [The Core Problem](#the-core-problem)
   - [The Proofline Philosophy](#the-proofline-philosophy)
@@ -73,6 +75,19 @@
 - [11. Threat Analysis & Security Boundaries](#11-threat-analysis--security-boundaries)
 - [12. Repository Structure](#12-repository-structure)
 - [13. License & Hackathon Submission Notice](#13-license--hackathon-submission-notice)
+
+---
+
+## 👥 Team & Submission Information
+
+| Field | Detail |
+|---|---|
+| **Hackathon** | **HackBlox 2026** (Organized by Hackers Cult) |
+| **Track** | **Web3 Track — Problem Statement 02: Soulbound Certificates** |
+| **Team Name** | **Team Rize** |
+| **Participation Type** | **Solo (1 Member)** |
+| **Member & Developer** | **Jatin Pandey** ([@satiricalguru](https://github.com/satiricalguru)) |
+| **GitHub Repository** | [satiricalguru/Proofline-hackblox](https://github.com/satiricalguru/Proofline-hackblox) (Private) |
 
 ---
 
