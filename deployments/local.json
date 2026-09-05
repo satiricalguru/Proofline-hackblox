@@ -1,0 +1,11 @@
+{
+  "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+  "chainId": 31337,
+  "blockNumber": "1",
+  "transactionHash": "0x2264c5704fa5c0eb6d9e6b44605034311abc4447326a584a78f4b0dd8677e661",
+  "owner": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "compiler": "0.8.36",
+  "optimizerRuns": 200,
+  "evmVersion": "cancun",
+  "deployedAt": "2026-09-05T05:55:27.185Z"
+}
