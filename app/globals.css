@@ -188,6 +188,12 @@ a:focus-visible {
   color: #7f8c7b;
   display: flex;
   justify-content: space-between;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.build-label:hover {
+  color: #28533b;
 }
 .main-shell {
   margin-left: 235px;

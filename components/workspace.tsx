@@ -110,7 +110,7 @@ export default function Workspace(initial: Initial) {
     return (
       <div className="boot-state">
         <Layers3 size={34} />
-        <h1>proofline.</h1>
+        <h1>Proofline.</h1>
         <p>{error || 'Connecting to the credential workspace…'}</p>
         {error && (
           <Button onClick={() => window.location.reload()}>Try again</Button>
@@ -711,7 +711,7 @@ function RegistryWorkspace({
           <span className="brand-mark">
             <Layers3 size={24} />
           </span>
-          proofline<span className="brand-dot">.</span>
+          Proofline<span className="brand-dot">.</span>
         </Link>
         <div className="workspace-label">CREDENTIAL WORKSPACE</div>
         <nav>
@@ -748,9 +748,14 @@ function RegistryWorkspace({
           >
             About soulbound credentials <ArrowUpRight size={15} />
           </a>
-          <div className="build-label">
+          <a
+            href="https://www.hackblox.xyz/"
+            target="_blank"
+            rel="noreferrer"
+            className="build-label"
+          >
             HACKBLOX 2026 <span>↗</span>
-          </div>
+          </a>
         </div>
       </aside>
       <div className="main-shell">
