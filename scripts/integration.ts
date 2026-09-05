@@ -14,7 +14,7 @@ import {
   verifyMetadata,
 } from '../lib/metadata';
 import type { RegistryConfig } from '../lib/types';
-const origin = 'http://localhost:3000';
+const origin = process.env.APP_ORIGIN || 'http://localhost:3002';
 const config = (await (
   await fetch(`${origin}/api/config`)
 ).json()) as RegistryConfig;

@@ -19,7 +19,8 @@
     "deploy:local": "tsx scripts/deploy.ts local",
     "deploy:sepolia": "tsx scripts/deploy.ts sepolia",
     "wallet:setup": "tsx scripts/setup-wallet.ts",
-    "test:integration": "tsx scripts/integration.ts"
+    "test:integration": "tsx scripts/integration.ts",
+    "test": "npm run test:contract && npm run test:verify && npm run test:integration"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
