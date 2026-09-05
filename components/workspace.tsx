@@ -42,6 +42,8 @@ import {
   X,
   ShieldX,
   ChevronRight,
+  Sun,
+  Moon,
   type LucideIcon,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -131,6 +133,23 @@ function RegistryWorkspace({
   initial: Initial;
 }) {
   const [view, setView] = useState(initial.tokenId ? 'credential' : 'registry');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
+    const isDark = document.documentElement.classList.contains('dark');
+    setTheme(isDark ? 'dark' : 'light');
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
+    try {
+      localStorage.setItem('proofline-theme', nextTheme);
+    } catch {
+      // localStorage may be unavailable
+    }
+    document.documentElement.classList.toggle('dark', nextTheme === 'dark');
+  };
   const [query, setQuery] = useState(initial.wallet || '');
   const [activeQuery, setActiveQuery] = useState(initial.wallet || '');
   const [rows, setRows] = useState<Row[]>([]),
@@ -773,6 +792,15 @@ function RegistryWorkspace({
               <span />
               {config.local ? 'Local chain' : 'Sepolia'}
             </span>
+            <button
+              type="button"
+              className="theme-toggle-btn"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+            </button>
             {isConnected ? (
               <Button
                 className="wallet-button"

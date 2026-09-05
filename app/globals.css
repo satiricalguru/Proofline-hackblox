@@ -239,6 +239,26 @@ a:focus-visible {
   background: white !important;
   border-color: #dce3d7 !important;
 }
+.theme-toggle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid #dce3d7;
+  background: white;
+  color: #28533b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.18s;
+}
+.theme-toggle-btn:hover {
+  background: #f0f4ec;
+  border-color: #c7d4c0;
+  color: #1a3c2a;
+  transform: translateY(-1px);
+}
 .main-content {
   max-width: 1440px;
   margin: auto;
@@ -1518,4 +1538,629 @@ a:focus-visible {
   .certificate-top .status-pill {
     border: 1px solid #999;
   }
+}
+
+/* ==========================================================================
+   Dark Mode Overrides
+   ========================================================================== */
+html.dark {
+  --background: #080d0a;
+  --foreground: #e6efe8;
+  --primary: #10b981;
+  --border: #1a2920;
+}
+
+.dark body {
+  background: #080d0a;
+  color: #e6efe8;
+}
+
+.dark .app-shell {
+  background: #080d0a;
+}
+
+/* Sidebar */
+.dark .sidebar {
+  background: #0d1510;
+  border-right-color: #1a2920;
+}
+
+.dark .brand {
+  color: #f0fdf4;
+}
+
+.dark .brand-mark {
+  color: #34d399;
+}
+
+.dark .brand-dot {
+  color: #34d399;
+}
+
+.dark .workspace-label {
+  color: #6e8574;
+}
+
+.dark .nav-item {
+  color: #8ea594;
+}
+
+.dark .nav-item:hover {
+  background: #142118;
+  color: #f0fdf4;
+}
+
+.dark .nav-item.active {
+  background: #192b20;
+  color: #34d399;
+}
+
+.dark .nav-dot {
+  background: #34d399;
+}
+
+.dark .network-label {
+  color: #7c9582;
+}
+
+.dark .network-label > span,
+.dark .network-pill > span {
+  background: #34d399;
+}
+
+.dark .sidebar-bottom p {
+  color: #8ea594;
+}
+
+.dark .sidebar-bottom > a {
+  color: #7c9582;
+}
+
+.dark .sidebar-bottom > a:hover {
+  color: #34d399;
+}
+
+.dark .build-label {
+  border-top-color: #1a2920;
+  color: #7c9582;
+}
+
+.dark .build-label:hover {
+  color: #34d399;
+}
+
+/* Topbar */
+.dark .topbar {
+  background: #0d1510;
+  border-bottom-color: #1a2920;
+}
+
+.dark .breadcrumb {
+  color: #6e8574;
+}
+
+.dark .breadcrumb strong {
+  color: #f0fdf4;
+}
+
+.dark .network-pill {
+  color: #8ea594;
+}
+
+.dark .theme-toggle-btn {
+  background: #131f17;
+  border-color: #22382a;
+  color: #34d399;
+}
+
+.dark .theme-toggle-btn:hover {
+  background: #1a2b20;
+  border-color: #2e4d3a;
+  color: #4ade80;
+}
+
+.dark .wallet-button {
+  background: #131f17 !important;
+  border-color: #22382a !important;
+  color: #e6efe8 !important;
+}
+
+.dark .wallet-button:hover {
+  background: #1a2b20 !important;
+  border-color: #2e4d3a !important;
+}
+
+/* Page Heading & General */
+.dark .eyebrow {
+  color: #34d399;
+}
+
+.dark .page-heading h1 {
+  color: #f0fdf4;
+}
+
+.dark .page-heading p {
+  color: #8ea594;
+}
+
+.dark .primary-button {
+  background: #16a34a !important;
+  color: #ffffff !important;
+}
+
+.dark .primary-button:hover {
+  background: #15803d !important;
+}
+
+.dark .mode-note {
+  border-color: #1e3325;
+  background: #121e16;
+  color: #93b19b;
+}
+
+.dark .mode-note.warning {
+  background: #231c0e;
+  border-color: #3d3115;
+  color: #fcd34d;
+}
+
+/* Stats */
+.dark .stats {
+  border-color: #1a2920;
+  background: #0f1812;
+}
+
+.dark .stats > div + div:before {
+  background: #1a2920;
+}
+
+.dark .stats span {
+  color: #7c9582;
+}
+
+.dark .stats strong {
+  color: #f0fdf4;
+}
+
+.dark .stats strong svg {
+  color: #34d399;
+}
+
+.dark .stats small {
+  color: #6e8574;
+}
+
+/* Registry Panel & Search */
+.dark .registry-panel {
+  border-color: #1a2920;
+  background: #0f1812;
+}
+
+.dark .section-heading h2 {
+  color: #f0fdf4;
+}
+
+.dark .section-heading p {
+  color: #8ea594;
+}
+
+.dark .section-index {
+  color: #6e8574;
+}
+
+.dark .search-form {
+  border-color: #1e3325;
+  background: #131f17;
+  color: #8ea594;
+}
+
+.dark .search-form input {
+  color: #f0fdf4 !important;
+}
+
+.dark .search-form input::placeholder {
+  color: #556d5c !important;
+}
+
+.dark .search-button {
+  background: #1a2c1f !important;
+  color: #34d399 !important;
+}
+
+.dark .search-button:hover {
+  background: #223a2a !important;
+}
+
+/* Empty State */
+.dark .empty-icon {
+  background: #142219;
+  border-color: #1e3325;
+  color: #34d399;
+}
+
+.dark .empty-state h3 {
+  color: #f0fdf4;
+}
+
+.dark .empty-state p {
+  color: #8ea594;
+}
+
+.dark .panel-footer {
+  border-top-color: #17251d;
+  color: #7c9582;
+}
+
+/* Proof Card */
+.dark .proof-card {
+  background: #101c14;
+  border-color: #1c3022;
+}
+
+.dark .proof-card-top {
+  color: #34d399;
+}
+
+.dark .proof-card-top .eyebrow {
+  color: #34d399;
+}
+
+.dark .proof-card h2 {
+  color: #f0fdf4;
+}
+
+.dark .proof-card > p {
+  color: #8ea594;
+}
+
+.dark .trust-path div {
+  color: #8ea594;
+}
+
+.dark .trust-path div svg:last-child {
+  color: #52755c;
+}
+
+.dark .trust-path i {
+  background: #1e3325;
+}
+
+.dark .proof-card-footer {
+  border-top-color: #1c3022;
+  color: #7c9582;
+}
+
+.dark .page-footer {
+  color: #6e8574;
+}
+
+/* Filters & Credential Rows */
+.dark .filters button,
+.dark .segmented button {
+  color: #7c9582;
+}
+
+.dark .filters button:hover,
+.dark .segmented button:hover {
+  color: #e6efe8;
+}
+
+.dark .filters button.selected,
+.dark .segmented button.selected {
+  background: #192c20;
+  color: #34d399;
+}
+
+.dark .filters > span {
+  color: #6e8574;
+}
+
+.dark .credential-row {
+  background: #0f1812;
+  border-top-color: #17251d;
+  color: #8ea594;
+}
+
+.dark .credential-row:hover {
+  background: #142219;
+}
+
+.dark .record-icon {
+  background: #142219;
+  border-color: #1e3325;
+  color: #34d399;
+}
+
+.dark .record-main strong {
+  color: #f0fdf4;
+}
+
+.dark .record-main small {
+  color: #7c9582;
+}
+
+.dark .status-pill {
+  background: #132419;
+  border-color: #1d3827;
+  color: #34d399;
+}
+
+.dark .status-pill.revoked,
+.dark .status-pill.mismatch {
+  background: #281412;
+  border-color: #40201c;
+  color: #f87171;
+}
+
+.dark .status-pill.unavailable {
+  background: #261f0e;
+  border-color: #423518;
+  color: #fcd34d;
+}
+
+.dark .status-pill.verified {
+  background: #12261a;
+  border-color: #1d3e2b;
+  color: #4ade80;
+}
+
+.dark .pagination {
+  border-top-color: #17251d;
+}
+
+.dark .pagination span {
+  color: #6e8574;
+}
+
+/* Forms & Inputs */
+.dark .form-content label,
+.dark .revoke-controls label {
+  color: #8ea594;
+}
+
+.dark .form-content input,
+.dark .form-content select,
+.dark .revoke-controls select {
+  background: #131f17 !important;
+  border-color: #1e3325 !important;
+  color: #f0fdf4 !important;
+}
+
+.dark .form-notice {
+  background: #121e16;
+  border-color: #1e3325;
+  color: #8ea594;
+}
+
+.dark .segmented {
+  border-bottom-color: #1a2920;
+}
+
+.dark .form-helper {
+  color: #7c9582;
+}
+
+/* Issuer Rows */
+.dark .issuer-row {
+  border-top-color: #17251d;
+  color: #8ea594;
+}
+
+.dark .issuer-row strong {
+  color: #f0fdf4;
+}
+
+.dark .issuer-row small {
+  color: #7c9582;
+}
+
+/* Certificate View */
+.dark .certificate {
+  background: #0c140e;
+  border-color: #1a2920;
+}
+
+.dark .certificate-top {
+  border-bottom-color: #17251d;
+}
+
+.dark .certificate-seal {
+  background: #121e16;
+  border-color: #1e3325;
+  outline-color: #16261c;
+  color: #34d399;
+}
+
+.dark .certificate-intro {
+  color: #7c9582;
+}
+
+.dark .certificate-body h2 {
+  color: #f0fdf4;
+}
+
+.dark .certificate-body h3 {
+  color: #b8ccbe;
+}
+
+.dark .certificate-meta {
+  border-top-color: #17251d;
+}
+
+.dark .certificate-meta span {
+  color: #6e8574;
+}
+
+.dark .certificate-meta strong {
+  color: #8ea594;
+}
+
+.dark .certificate-wallet {
+  color: #6e8574;
+}
+
+.dark .certificate-bottom {
+  border-top-color: #17251d;
+  background: #090f0b;
+  color: #6e8574;
+}
+
+/* Verification Receipt */
+.dark .verification-receipt {
+  background: #0f1812;
+  border-color: #1a2920;
+}
+
+.dark .verification-receipt .section-heading {
+  border-bottom-color: #17251d;
+}
+
+.dark .check-row {
+  border-top-color: #17251d;
+}
+
+.dark .check-icon {
+  background: #142219;
+  color: #34d399;
+}
+
+.dark .check-icon.failed {
+  background: #2b1812;
+  color: #f87171;
+}
+
+.dark .check-row strong {
+  color: #f0fdf4;
+}
+
+.dark .check-row p {
+  color: #7c9582;
+}
+
+.dark .receipt-block {
+  border-top-color: #17251d;
+  color: #8ea594;
+}
+
+.dark .receipt-block small {
+  color: #6e8574;
+}
+
+.dark .receipt-warning {
+  background: #231c0e;
+  color: #fcd34d;
+}
+
+.dark .revocation-banner {
+  background: #261412;
+  border-color: #3e201c;
+  color: #f87171;
+}
+
+.dark .share-content img {
+  border-color: #1e3325;
+  background: white;
+}
+
+.dark .share-content code {
+  color: #7c9582;
+}
+
+.dark .technical-details {
+  border-top-color: #17251d;
+}
+
+.dark .technical-details summary {
+  color: #34d399;
+}
+
+.dark .technical-details dt {
+  color: #7c9582;
+}
+
+.dark .technical-details dd {
+  color: #a3b8aa;
+}
+
+.dark .technical-details a,
+.dark .text-link {
+  color: #34d399;
+}
+
+.dark .file-drop {
+  border-color: #1e3325;
+  background: #111d15;
+  color: #34d399 !important;
+}
+
+.dark .file-drop small {
+  color: #7c9582;
+}
+
+.dark .revoke-controls {
+  border-top-color: #17251d;
+}
+
+.dark .revoke-controls p {
+  color: #7c9582;
+}
+
+.dark .deployment-details dt {
+  color: #7c9582;
+}
+
+.dark .deployment-details dd {
+  color: #a3b8aa;
+}
+
+.dark .setup-instructions {
+  background: #1a160c;
+  border-color: #332914;
+}
+
+.dark .setup-instructions h3 {
+  color: #fef3c7;
+}
+
+.dark .setup-instructions p {
+  color: #fde68a;
+}
+
+.dark .setup-instructions code {
+  color: #fcd34d;
+}
+
+.dark .boot-state {
+  background: #080d0a;
+  color: #f0fdf4;
+}
+
+.dark .boot-state p {
+  color: #8ea594;
+}
+
+.dark .boot-state svg {
+  color: #34d399;
+}
+
+.dark .icon-button:hover {
+  background: #142219;
+}
+
+.dark .alert.error {
+  background: #251210;
+  border-color: #421f1a;
+  color: #fca5a5;
+}
+
+.dark .alert.success {
+  background: #102417;
+  border-color: #1b3d27;
+  color: #86efac;
+}
+
+.dark .alert.transaction {
+  background: #101c24;
+  border-color: #1a303e;
+  color: #93c5fd;
 }

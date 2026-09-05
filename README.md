@@ -1,6 +1,10 @@
 <div align="center">
 
-  <img src="public/logo.svg" width="110" height="110" alt="Proofline App Logo" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/logo-light.svg">
+    <img src="public/logo-dark.svg" width="110" height="110" alt="Proofline App Logo" />
+  </picture>
 
   <h1>Proofline</h1>
 
