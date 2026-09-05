@@ -90,17 +90,23 @@ export async function limitedBytes(response: Response): Promise<Uint8Array> {
   const reader = response.body.getReader();
   const parts: Uint8Array[] = [];
   let length = 0;
+  let isDone = false;
   try {
     while (true) {
       const { done, value } = await reader.read();
-      if (done) break;
+      if (done) {
+        isDone = true;
+        break;
+      }
       length += value.length;
       if (length > MAX_METADATA_BYTES)
         throw new Error('Metadata exceeds 32 KB');
       parts.push(value);
     }
   } finally {
-    await reader.cancel();
+    if (!isDone) {
+      await reader.cancel().catch(() => {});
+    }
   }
   const bytes = new Uint8Array(length);
   let offset = 0;

@@ -32,16 +32,22 @@ export async function POST(request: Request) {
     if (!reader) throw new Error('Missing request');
     let length = 0;
     const chunks: Uint8Array[] = [];
+    let isDone = false;
     try {
       while (true) {
         const part = await reader.read();
-        if (part.done) break;
+        if (part.done) {
+          isDone = true;
+          break;
+        }
         length += part.value.length;
         if (length > 50000) throw new Error('Request too large');
         chunks.push(part.value);
       }
     } finally {
-      await reader.cancel();
+      if (!isDone) {
+        await reader.cancel().catch(() => {});
+      }
     }
     const bodyBytes = new Uint8Array(length);
     let position = 0;
