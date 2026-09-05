@@ -106,43 +106,43 @@ Proofline implements 100% of the core requirements and **all three bonus stretch
 
 ```mermaid
 flowchart TB
-    subgraph Users ["Actors"]
-        Admin["👑 Registry Owner"]
-        Institution["🏛️ Accredited Institution"]
-        Department["🏢 Department Issuer"]
-        Student["🎓 Recipient / Learner"]
-        Verifier["🔍 Public Verifier / Employer"]
+    subgraph Users[Actors]
+        Admin["Registry Owner"]
+        Institution["Accredited Institution"]
+        Department["Department Issuer"]
+        Student["Recipient / Learner"]
+        Verifier["Public Verifier / Employer"]
     end
 
-    subgraph Frontend ["Proofline Frontend (Next.js / Vite / Wagmi)"]
+    subgraph Frontend["Proofline Frontend - Next.js / Vite / Wagmi"]
         UI["Workspace UI (7 Tabs)"]
-        VerifyEngine["Verification Engine (lib/registry.ts)"]
+        VerifyEngine["Verification Engine"]
         TamperTool["Local JSON Tamper Comparator"]
-        QRGen["QR Code Generator & Print Engine"]
+        QRGen["QR Code Generator and Print Engine"]
     end
 
-    subgraph BackendAPI ["Cloudflare Worker / Server API"]
-        ConfigAPI["/api/config<br/>(Network & Deployment)"]
-        UploadAPI["/api/upload<br/>(Signed Upload Gate)"]
-        LocalMock["/api/metadata/:cid<br/>(Local Dev Gateway)"]
+    subgraph BackendAPI["Cloudflare Worker / Server API"]
+        ConfigAPI["/api/config - Network Config"]
+        UploadAPI["/api/upload - Signed Upload Gate"]
+        LocalMock["/api/metadata/:cid - Dev Gateway"]
     end
 
-    subgraph Storage ["Decentralized Storage"]
-        IPFS["Pinata IPFS Cluster<br/>(Persistent Content)"]
-        Gateways["Public IPFS Gateways<br/>(ipfs.io, dweb.link)"]
+    subgraph Storage["Decentralized Storage"]
+        IPFS["Pinata IPFS Cluster"]
+        Gateways["Public IPFS Gateways - ipfs.io, dweb.link"]
     end
 
-    subgraph Blockchain ["Ethereum Blockchain (Sepolia / Anvil)"]
-        Contract["ProoflineCredential.sol<br/>ERC-721 + ERC-5192<br/>Ownable2Step + ReentrancyGuard"]
-        State["On-Chain State:<br/>- Credentials & SHA-256 Hashes<br/>- Issuer Hierarchy<br/>- Revocation Records"]
+    subgraph Blockchain["Ethereum Blockchain - Sepolia / Anvil"]
+        Contract["ProoflineCredential.sol - ERC-721 and ERC-5192"]
+        State["On-Chain State - Hashes, Hierarchy, Revocations"]
     end
 
     Admin -->|registerInstitution| Contract
     Institution -->|registerDepartment| Contract
     Department -->|1. Sign Metadata| UploadAPI
     UploadAPI -->|2. Pin Payload| IPFS
-    Department -->|3. Mint (SafeMint + Lock)| Contract
-    Student -->|Holds Soulbound Token| Blockchain
+    Department -->|3. Mint and Lock| Contract
+    Student -->|Holds Soulbound Token| Contract
     Verifier -->|Zero-Wallet Lookup| UI
     UI -->|Read Contract State| Contract
     UI -->|Fetch Metadata Payload| Gateways
