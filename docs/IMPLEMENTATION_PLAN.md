@@ -253,4 +253,4 @@ Submit a clean 1,800-row CSV with image_id, integer prediction 0–5, numeric co
 
 ## First executable step
 
-Confirm Web3 eligibility and the real submission portal, then implement and test the smallest real chain flow: authorize issuer → mint IPFS-backed soulbound certificate → public verification. Deploy that before adding bonuses. Keep the rulebook conflicts and full source inventory in [RULES_AND_RESEARCH.md](/Users/jatinpandey/Antigravity/Hackblox/RULES_AND_RESEARCH.md).
+Confirm Web3 eligibility and the real submission portal, then implement and test the smallest real chain flow: authorize issuer → mint IPFS-backed soulbound certificate → public verification. Deploy that before adding bonuses. Keep the rulebook conflicts and full source inventory in [RULES_AND_RESEARCH.md](RULES_AND_RESEARCH.md).
