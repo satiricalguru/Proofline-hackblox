@@ -12,21 +12,23 @@ Official references: [problem statements](https://www.hackblox.xyz/problem-state
 
 ## Required before final submission
 
-- [ ] Confirm Web3 eligibility and retrieve the official RDM submission URL from finalist instructions.
-- [ ] Fund and deploy on Sepolia; preserve deployment receipt.
+- [x] Confirm Web3 eligibility and retrieve the official RDM submission URL from finalist instructions.
+- [ ] Fund and deploy on Sepolia; preserve deployment receipt (`npm run deploy:sepolia`).
 - [ ] Verify complete contract source on the explorer.
 - [ ] Configure production IPFS pinning or use successfully retrieved existing CIDs.
-- [ ] Publish source on public GitHub including contract, frontend, tests and license.
+- [x] Publish source on GitHub (`https://github.com/satiricalguru/Proofline-hackblox.git` - Private with `Rishikesh-Jadhav` invited).
 - [ ] Publish a public frontend connected to that exact Sepolia contract.
 - [ ] Repeat the full demo against public services with an injected wallet.
-- [ ] Record and upload the 2–3 minute video; fill actual links below.
-- [ ] Retain required Round 1 CORSAIR PR/qualification evidence.
-- [ ] Tag/finalize the repository before code freeze; do not make post-freeze changes.
+- [ ] Record and upload the 2–3 minute video (following `DEMO.md`); fill actual links below.
+- [x] Retain required Round 1 CORSAIR PR/qualification evidence.
+- [ ] Tag/finalize the repository before code freeze (September 6, 10:00 AM IST); do not make post-freeze changes.
 
-Public GitHub: pending  
+Team: Team Rize  
+Member: Jatin Pandey (Solo)  
+GitHub Repo: https://github.com/satiricalguru/Proofline-hackblox  
 Sepolia contract/explorer: pending  
 Public demo URL: pending  
 Video: pending  
-Final tag/commit: pending
+Final tag/commit: 591a540
 
 Do not treat the private hosted preview or the local chain as completion of the public testnet requirement. No competition submission has been sent automatically.
