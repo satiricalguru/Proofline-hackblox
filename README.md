@@ -649,21 +649,21 @@ The frontend is a single-page reactive application built with React 19, TypeScri
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│  🛡️ PROOFLINE                                  [ Connect Wallet ]       │
+│  PROOFLINE                                         [ Connect Wallet ]  │
 ├────────────────────────────────────────────────────────────────────────┤
-│  [Registry]  [Verify]  [Wallet]  [Issue]  [Institutions]  [Admin]     │
+│  [Registry]   [Verify]   [Wallet]   [Issue]   [Institutions]   [Admin] │
 ├────────────────────────────────────────────────────────────────────────┤
 │                                                                        │
-│   🔍 Search Credential by Token ID or Wallet Address:                  │
-│   [ 0x90F79bf6EB2c4f870365E785982E1f101E93b906                   ] [Go]│
+│  Search Credential by Token ID or Recipient Address:                   │
+│  [ 0x90F79bf6EB2c4f870365E785982E1f101E93b906             ]  [Search]  │
 │                                                                        │
 │   ┌────────────────────────────────────────────────────────────────┐   │
-│   │ 🎓 Token #1 — Applied Smart Contract Engineering               │   │
-│   │ Recipient: Alex Morgan (0x90F7...b906)   Status: 🟢 VERIFIED   │   │
-│   │ Issuer: School of Engineering (0x3C44...93BC)                  │   │
+│   │ Token #1: Applied Smart Contract Engineering                   │   │
+│   │ Recipient:   Alex Morgan (0x90F7...b906)    Status: [VERIFIED] │   │
+│   │ Issuer:      School of Engineering (0x3C44...93BC)             │   │
 │   │ Institution: Example Academy (0x7099...79C8)                   │   │
-│   │ Fingerprint: 0x4f8b2c1e8a93... (Exact Bitwise Match)          │   │
-│   │ [ View Certificate ]   [ Show QR Code ]   [ Tamper Check ]     │   │
+│   │ Fingerprint: 0x4f8b2c1e8a93...             Match: 100% BITWISE │   │
+│   │ [ View Certificate ]    [ Show QR Code ]    [ Tamper Check ]   │   │
 │   └────────────────────────────────────────────────────────────────┘   │
 │                                                                        │
 └────────────────────────────────────────────────────────────────────────┘
