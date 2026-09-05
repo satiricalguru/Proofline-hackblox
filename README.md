@@ -754,8 +754,8 @@ Local development gateway for serving cached JSON metadata without needing exter
 
 ```sh
 # 1. Clone and install dependencies
-git clone https://github.com/jatinpandey/proofline.git
-cd proofline
+git clone https://github.com/satiricalguru/Proofline-hackblox.git
+cd Proofline-hackblox
 npm ci
 
 # 2. Compile smart contracts
