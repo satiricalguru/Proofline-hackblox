@@ -1,18 +1,28 @@
-# 🛡️ Proofline
+<div align="center">
 
-> **Cryptographically Bound Academic & Professional Credentials with Independent On-Chain Provenance, Exact-Byte Integrity, and Transparent Revocation.**
-> 
-> *Built for **HackBlox 2026** — Web3 Problem 02: Soulbound Certificates.*
+  <img src="public/logo.svg" width="110" height="110" alt="Proofline App Logo" />
 
----
+  <h1>Proofline</h1>
 
-[![Solidity](https://img.shields.io/badge/Solidity-0.8.36-363636?style=for-the-badge&logo=solidity&logoColor=white)](https://soliditylang.org/)
-[![ERC-5192](https://img.shields.io/badge/EIP--5192-Soulbound%20Token-blueviolet?style=for-the-badge)](https://eips.ethereum.org/EIPS/eip-5192)
-[![Foundry](https://img.shields.io/badge/Foundry-17%20Tests%20Passed%20(256%20Fuzz)-orange?style=for-the-badge&logo=ethereum&logoColor=white)](https://getfoundry.sh/)
-[![Node.js Tests](https://img.shields.io/badge/Node%20Suite-13%20Passed-brightgreen?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Integration](https://img.shields.io/badge/E2E%20Integration-8%20Checks%20Passed-success?style=for-the-badge)](scripts/integration.ts)
-[![Network](https://img.shields.io/badge/Network-Sepolia%20%7C%20Anvil%2031337-blue?style=for-the-badge)](https://sepolia.etherscan.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+  <p>
+    <strong>Cryptographically Bound Academic &amp; Professional Credentials with Independent On-Chain Provenance, Exact-Byte Integrity, and Transparent Revocation.</strong>
+  </p>
+
+  <p>
+    <em>Built for <strong>HackBlox 2026</strong> — Web3 Problem 02: Soulbound Certificates.</em>
+  </p>
+
+  <p>
+    <a href="https://soliditylang.org/"><img src="https://img.shields.io/badge/Solidity-0.8.36-363636?style=for-the-badge&logo=solidity&logoColor=white" alt="Solidity" /></a>
+    <a href="https://eips.ethereum.org/EIPS/eip-5192"><img src="https://img.shields.io/badge/EIP--5192-Soulbound%20Token-blueviolet?style=for-the-badge" alt="EIP-5192" /></a>
+    <a href="https://getfoundry.sh/"><img src="https://img.shields.io/badge/Foundry-17%20Tests%20Passed%20(256%20Fuzz)-orange?style=for-the-badge&logo=ethereum&logoColor=white" alt="Foundry" /></a>
+    <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node%20Suite-13%20Passed-brightgreen?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" /></a>
+    <a href="scripts/integration.ts"><img src="https://img.shields.io/badge/E2E%20Integration-8%20Checks%20Passed-success?style=for-the-badge" alt="Integration" /></a>
+    <a href="https://sepolia.etherscan.io/"><img src="https://img.shields.io/badge/Network-Sepolia%20%7C%20Anvil%2031337-blue?style=for-the-badge" alt="Network" /></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT" /></a>
+  </p>
+
+</div>
 
 ---
 
