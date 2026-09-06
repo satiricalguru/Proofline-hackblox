@@ -145,10 +145,26 @@ function RegistryWorkspace({
   config: RegistryConfig;
   initial: Initial;
 }) {
-  const [view, setView] = useState(initial.tokenId ? 'credential' : 'registry');
+  const [view, setView] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const t = params.get('tab');
+      if (t) return t;
+    }
+    return initial.tokenId ? 'credential' : 'registry';
+  });
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const reqTheme = params.get('theme');
+      if (reqTheme === 'light' || reqTheme === 'dark') {
+        setTheme(reqTheme);
+        document.documentElement.classList.toggle('dark', reqTheme === 'dark');
+        return;
+      }
+    }
     const isDark = document.documentElement.classList.contains('dark');
     setTheme(isDark ? 'dark' : 'light');
   }, []);

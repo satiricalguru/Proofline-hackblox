@@ -80,10 +80,13 @@ for i, seg in enumerate(segments):
     audio_wav = os.path.join(temp_dir, f"{seg['id']}.wav")
     clip_mp4 = os.path.join(temp_dir, f"{seg['id']}.mp4")
 
-    # 1. Call Sarvam AI API
-    print(f"Generating Sarvam AI voiceover for segment {i+1}/{len(segments)}: {seg['id']}...")
-    generate_sarvam_audio(seg["text"], audio_wav)
-    time.sleep(0.5)
+    # 1. Call Sarvam AI API if audio doesn't exist
+    if not os.path.exists(audio_wav) or os.path.getsize(audio_wav) == 0:
+        print(f"Generating Sarvam AI voiceover for segment {i+1}/{len(segments)}: {seg['id']}...")
+        generate_sarvam_audio(seg["text"], audio_wav)
+        time.sleep(0.5)
+    else:
+        print(f"Reusing existing Sarvam AI voiceover for segment {i+1}/{len(segments)}: {seg['id']}...")
 
     # 2. Get audio duration
     probe = subprocess.check_output([
