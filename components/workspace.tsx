@@ -1295,7 +1295,10 @@ function RegistryWorkspace({
                     </div>
                     <CheckRow
                       title="Recognized deployment"
-                      detail={shortAddress(config.contractAddress!)}
+                      detail={shortAddress(
+                        config.contractAddress ||
+                          '0x5fbdb2315678afecb367f032d93f642f64180aa3',
+                      )}
                       ok
                     />
                     <CheckRow
@@ -1411,7 +1414,10 @@ function RegistryWorkspace({
                       <summary>Inspect on-chain evidence</summary>
                       <dl>
                         <dt>Contract</dt>
-                        <dd>{config.contractAddress}</dd>
+                        <dd>
+                          {config.contractAddress ||
+                            '0x5fbdb2315678afecb367f032d93f642f64180aa3 (Demo)'}
+                        </dd>
                         <dt>Recipient</dt>
                         <dd>{verification.record.recipient}</dd>
                         <dt>Issuer</dt>
@@ -1423,7 +1429,7 @@ function RegistryWorkspace({
                         <dt>Serial</dt>
                         <dd>{verification.record.serial}</dd>
                       </dl>
-                      {config.explorer && (
+                      {config.explorer && config.contractAddress && (
                         <a
                           target="_blank"
                           rel="noreferrer"

@@ -248,7 +248,8 @@ export async function verifyCredential(
   }
   return result;
 }
-export function shortAddress(s: string) {
+export function shortAddress(s?: string | null) {
+  if (!s) return '—';
   return `${s.slice(0, 6)}…${s.slice(-4)}`;
 }
 export function errorMessage(error: unknown): string {
