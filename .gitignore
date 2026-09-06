@@ -43,3 +43,7 @@ next-env.d.ts
 *.tsbuildinfo
 !.env.example
 node_modules
+IMPLEMENTATION_PLAN.md
+RULES_AND_RESEARCH.md
+docs/IMPLEMENTATION_PLAN.md
+docs/RULES_AND_RESEARCH.md
