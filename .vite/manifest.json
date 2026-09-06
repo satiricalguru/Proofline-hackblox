@@ -1,0 +1,106 @@
+{
+  "_framework-DTZGTDtF.js": {
+    "file": "_next/static/chunks/framework-DTZGTDtF.js",
+    "name": "framework",
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js"
+    ]
+  },
+  "_query-DugiHe4Q.js": {
+    "file": "_next/static/chunks/query-DugiHe4Q.js",
+    "name": "query"
+  },
+  "_rolldown-runtime-hePW80VL.js": {
+    "file": "_next/static/chunks/rolldown-runtime-hePW80VL.js",
+    "name": "rolldown-runtime"
+  },
+  "_utils-Bpv4vmSW.js": {
+    "file": "_next/static/chunks/utils-Bpv4vmSW.js",
+    "name": "utils"
+  },
+  "_vinext-Dx_MEiq-.js": {
+    "file": "_next/static/chunks/vinext-Dx_MEiq-.js",
+    "name": "vinext",
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js",
+      "_framework-DTZGTDtF.js"
+    ],
+    "dynamicImports": [
+      "node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js",
+      "_vinext-Dx_MEiq-.js"
+    ]
+  },
+  "components/workspace.tsx": {
+    "file": "_next/static/chunks/workspace-lmj-BlMP.js",
+    "name": "workspace",
+    "src": "components/workspace.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js",
+      "_framework-DTZGTDtF.js",
+      "_vinext-Dx_MEiq-.js",
+      "_query-DugiHe4Q.js",
+      "_utils-Bpv4vmSW.js"
+    ],
+    "dynamicImports": [
+      "_vinext-Dx_MEiq-.js",
+      "node_modules/viem/_esm/utils/ccip.js",
+      "node_modules/@noble/curves/esm/secp256k1.js"
+    ]
+  },
+  "node_modules/@noble/curves/esm/secp256k1.js": {
+    "file": "_next/static/chunks/secp256k1-5cakWxl_.js",
+    "name": "secp256k1",
+    "src": "node_modules/@noble/curves/esm/secp256k1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "components/workspace.tsx"
+    ]
+  },
+  "node_modules/viem/_esm/utils/ccip.js": {
+    "file": "_next/static/chunks/ccip-DFdV-bf6.js",
+    "name": "ccip",
+    "src": "node_modules/viem/_esm/utils/ccip.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "components/workspace.tsx"
+    ]
+  },
+  "node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js": {
+    "file": "_next/static/chunks/hybrid-client-route-owner-yHxcrpYy.js",
+    "name": "hybrid-client-route-owner",
+    "src": "node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vinext-Dx_MEiq-.js",
+      "_query-DugiHe4Q.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/layout-segment-context.js": {
+    "file": "_next/static/chunks/layout-segment-context-BSIsBgMO.js",
+    "name": "layout-segment-context",
+    "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js",
+      "_framework-DTZGTDtF.js",
+      "_vinext-Dx_MEiq-.js"
+    ]
+  },
+  "virtual:vinext-app-browser-entry": {
+    "file": "_next/static/chunks/index-B5UetX7B.js",
+    "name": "index",
+    "src": "virtual:vinext-app-browser-entry",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js",
+      "_framework-DTZGTDtF.js",
+      "_vinext-Dx_MEiq-.js"
+    ],
+    "dynamicImports": [
+      "_vinext-Dx_MEiq-.js",
+      "node_modules/vinext/dist/shims/layout-segment-context.js",
+      "components/workspace.tsx"
+    ]
+  }
+}
