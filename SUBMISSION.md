@@ -17,9 +17,9 @@ Official references: [problem statements](https://www.hackblox.xyz/problem-state
 - [ ] Verify complete contract source on the explorer.
 - [ ] Configure production IPFS pinning or use successfully retrieved existing CIDs.
 - [x] Publish source on GitHub (`https://github.com/satiricalguru/Proofline-hackblox.git` - Private with `Rishikesh-Jadhav` invited).
-- [ ] Publish a public frontend connected to that exact Sepolia contract.
+- [x] Publish a public frontend on GitHub Pages (https://satiricalguru.github.io/Proofline-hackblox/).
 - [ ] Repeat the full demo against public services with an injected wallet.
-- [x] Record and prepare demo walkthrough video (saved in docs/demo-walkthrough.webp adhering to DEMO.md script).
+- [x] Record and produce demo walkthrough video (saved in docs/demo-walkthrough.mp4 with young Indian male voice narration).
 - [x] Retain required Round 1 CORSAIR PR/qualification evidence.
 - [x] Tag/finalize the repository before code freeze (September 6, 10:00 AM IST); do not make post-freeze changes.
 
@@ -27,8 +27,8 @@ Team: Team Rize
 Member: Jatin Pandey (Solo)  
 GitHub Repo: https://github.com/satiricalguru/Proofline-hackblox  
 Sepolia contract/explorer: pending (funded deployer required: 0xA8c88f3901F5abFc6F5A63947873dbf7AA8d9A79)  
-Public demo URL: pending (run locally at http://localhost:3002/)  
-Video: docs/demo-walkthrough.webp  
+Public demo URL: https://satiricalguru.github.io/Proofline-hackblox/  
+Video: docs/demo-walkthrough.mp4 (2m 45s, 1080p, narrated in English by Rishi)  
 Final tag/commit: v1.0.0-hackblox-submission
 
 Do not treat the private hosted preview or the local chain as completion of the public testnet requirement. No competition submission has been sent automatically.

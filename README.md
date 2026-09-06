@@ -88,6 +88,41 @@
 | **Participation Type** | **Solo (1 Member)** |
 | **Member & Developer** | **Jatin Pandey** ([@satiricalguru](https://github.com/satiricalguru)) |
 | **GitHub Repository** | [satiricalguru/Proofline-hackblox](https://github.com/satiricalguru/Proofline-hackblox) (Private) |
+| **🌐 Live GitHub Pages Demo** | **[https://satiricalguru.github.io/Proofline-hackblox/](https://satiricalguru.github.io/Proofline-hackblox/)** |
+| **🎥 Video Walkthrough (2m 45s)** | **[`docs/demo-walkthrough.mp4`](docs/demo-walkthrough.mp4)** *(Narrated in English by Rishi)* |
+| **Git Release Tag** | `v1.0.0-hackblox-submission` |
+
+---
+
+## 📸 Visual Showcase & Feature Tour
+
+### 1. Real-Time Credential Registry Dashboard
+> Search across credentials, filter by status (All, Active, Revoked), and inspect registry-wide statistics.
+![Registry Dashboard](docs/screenshots/01_registry_dashboard.png)
+
+### 2. Zero-Wallet Verification & Dynamic QR Codes (Stretch Feature 2)
+> Independent 5-stage cryptographic verification pipeline matching exact SHA-256 IPFS metadata hash with on-chain storage. Dynamic QR code for instant mobile verification.
+![Credential Verification](docs/screenshots/02_credential_verification.png)
+
+### 3. Permanent On-Chain Revocation with Reason Codes (Stretch Feature 1)
+> Transparent status updates preserving recipient wallet, metadata audit history, and provenance without burning tokens.
+![Revocation Status](docs/screenshots/03_revocation_status.png)
+
+### 4. Two-Tier Institutional Issuer Governance (Stretch Feature 3)
+> Registry Owner $\rightarrow$ Accredited Institutions (e.g. Universities) $\rightarrow$ Specialized Departments. Instant cascade suspension of sub-issuers.
+![Institutional Hierarchy](docs/screenshots/04_institution_hierarchy.png)
+
+### 5. Decentralized Minting Wizard & IPFS Metadata Formulation
+> Automated canonical JSON metadata generator, client-side cryptographic digest calculation, and soulbound minting.
+![Issue Credential](docs/screenshots/06_issue_credential.png)
+
+### 6. Responsive UI with Instant Dark/Light Theme Switching
+> Full accessibility and user comfort with persistent dark and light mode themes and custom vector branding.
+![Light Mode Theme](docs/screenshots/07_light_mode.png)
+
+### 7. Deployment & Contract Verification Information
+> Direct explorer links, contract standard input compilation artifacts, and network status details.
+![Deployment Status](docs/screenshots/05_deployment_status.png)
 
 ---
 
