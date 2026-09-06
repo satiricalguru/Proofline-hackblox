@@ -89,7 +89,7 @@
 | **Member & Developer** | **Jatin Pandey** ([@satiricalguru](https://github.com/satiricalguru)) |
 | **GitHub Repository** | [satiricalguru/Proofline-hackblox](https://github.com/satiricalguru/Proofline-hackblox) (Private) |
 | **🌐 Live GitHub Pages Demo** | **[https://satiricalguru.github.io/Proofline-hackblox/](https://satiricalguru.github.io/Proofline-hackblox/)** |
-| **🎥 Video Walkthrough (2m 45s)** | **[`docs/demo-walkthrough.mp4`](docs/demo-walkthrough.mp4)** *(Narrated in English by Rishi)* |
+| **🎥 Video Walkthrough (2m 57s)** | **[Watch Live MP4](https://satiricalguru.github.io/Proofline-hackblox/demo-walkthrough.mp4)** / **[`docs/demo-walkthrough.mp4`](docs/demo-walkthrough.mp4)** *(Voiceover: Sarvam AI `aditya` — Young Indian Male)* |
 | **Git Release Tag** | `v1.0.0-hackblox-submission` |
 
 ---
