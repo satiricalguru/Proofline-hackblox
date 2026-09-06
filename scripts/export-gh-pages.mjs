@@ -30,6 +30,9 @@ fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
 if (fs.existsSync('docs/demo-walkthrough.mp4')) {
   fs.copyFileSync('docs/demo-walkthrough.mp4', path.join(outDir, 'demo-walkthrough.mp4'));
 }
+if (fs.existsSync('docs')) {
+  fs.cpSync('docs', path.join(outDir, 'docs'), { recursive: true });
+}
 
 // 4. Render HTML via server handler
 const mod = await import('../dist/server/index.js');
