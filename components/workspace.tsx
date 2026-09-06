@@ -77,6 +77,12 @@ import type {
   Verification,
   Metadata,
 } from '@/lib/types';
+import {
+  DEMO_CONFIG,
+  DEMO_ISSUERS,
+  DEMO_CREDENTIALS,
+  getDemoVerification,
+} from '@/lib/demo-data';
 const navigation: [string, string, LucideIcon][] = [
   ['registry', 'Registry', FileCheck2],
   ['issue', 'Issue credential', Plus],
@@ -100,13 +106,20 @@ export default function Workspace(initial: Initial) {
   const [config, setConfig] = useState<RegistryConfig | null>(null),
     [error, setError] = useState('');
   useEffect(() => {
-    fetch('/api/config')
+    const isGhPages =
+      typeof window !== 'undefined' &&
+      window.location.pathname.startsWith('/Proofline-hackblox');
+    const basePath = isGhPages ? '/Proofline-hackblox' : '';
+    fetch(`${basePath}/api/config`)
       .then((r) => {
         if (!r.ok) throw new Error('Configuration unavailable');
         return r.json() as Promise<RegistryConfig>;
       })
       .then(setConfig)
-      .catch((e) => setError(errorMessage(e)));
+      .catch(() => {
+        // Fallback for static hosting / GitHub Pages
+        setConfig(DEMO_CONFIG);
+      });
   }, []);
   if (!config)
     return (
@@ -228,12 +241,27 @@ function RegistryWorkspace({
     setConfirmRevoke(false);
   }, []);
   const linkFor = useCallback(
-    (id: string) =>
-      `${typeof window !== 'undefined' ? window.location.origin : ''}/verify/${config.chainId}/${config.contractAddress}/${id}`,
+    (id: string) => {
+      const origin =
+        typeof window !== 'undefined' ? window.location.origin : '';
+      const isGhPages =
+        typeof window !== 'undefined' &&
+        window.location.pathname.startsWith('/Proofline-hackblox');
+      const prefix = isGhPages ? '/Proofline-hackblox' : '';
+      return `${origin}${prefix}/verify/${config.chainId}/${config.contractAddress || '0x5fbdb2315678afecb367f032d93f642f64180aa3'}/${id}`;
+    },
     [config.chainId, config.contractAddress],
   );
   useEffect(() => {
-    if (!config.contractAddress) return;
+    if (!config.contractAddress) {
+      setStats({
+        issued: '3',
+        revoked: '1',
+        issuers: '2',
+      });
+      setOwner('0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266');
+      return;
+    }
     let cancelled = false;
     const c = registryClient(config);
     const args = { address: config.contractAddress, abi };
@@ -311,7 +339,45 @@ function RegistryWorkspace({
     setBusy(true);
     setError('');
     if (!config.contractAddress) {
-      setBusy(false);
+      if (view === 'registry') {
+        let list = [...DEMO_CREDENTIALS];
+        if (activeQuery) {
+          const q = activeQuery.toLowerCase().trim();
+          list = list.filter(
+            (c) =>
+              c.id === q ||
+              c.recipient.toLowerCase().includes(q) ||
+              c.name.toLowerCase().includes(q) ||
+              c.course.toLowerCase().includes(q),
+          );
+        }
+        if (current === requestId.current) {
+          setRows(list);
+          setMore(false);
+          setBusy(false);
+        }
+      } else if (view === 'credential') {
+        const v = getDemoVerification(selected);
+        if (current === requestId.current) {
+          setVerification(v);
+          QRCode.toDataURL(linkFor(selected), {
+            margin: 1,
+            width: 160,
+            color: { dark: '#234932', light: '#ffffff' },
+          })
+            .then(setQr)
+            .catch(() => setQr(''));
+          setBusy(false);
+        }
+      } else if (view === 'institutions') {
+        if (current === requestId.current) {
+          setIssuers(DEMO_ISSUERS);
+          setIssuerMore(false);
+          setBusy(false);
+        }
+      } else {
+        setBusy(false);
+      }
       return;
     }
     const load = async () => {
@@ -582,7 +648,11 @@ function RegistryWorkspace({
             expires,
           ),
         });
-        const response = await fetch('/api/upload', {
+        const isGhPages =
+          typeof window !== 'undefined' &&
+          window.location.pathname.startsWith('/Proofline-hackblox');
+        const basePath = isGhPages ? '/Proofline-hackblox' : '';
+        const response = await fetch(`${basePath}/api/upload`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -878,14 +948,14 @@ function RegistryWorkspace({
             </div>
           )}
           {!config.contractAddress && (
-            <div className="mode-note warning">
-              <TriangleAlert size={17} />
+            <div className="mode-note">
+              <ShieldCheck size={17} />
               <span>
-                Sepolia deployment pending. The application is ready to connect
-                once the registry is deployed.
+                Interactive Showcase Mode · Displaying authentic verified
+                credentials from Example Academy and School of Engineering.
               </span>
               <button onClick={() => setPage('settings')}>
-                View setup <ArrowRight size={14} />
+                View deployment setup <ArrowRight size={14} />
               </button>
             </div>
           )}

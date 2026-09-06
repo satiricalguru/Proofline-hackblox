@@ -151,8 +151,17 @@ export async function retrieveMetadata(
   cid: string,
 ): Promise<Uint8Array> {
   const validated = validateCid(cid);
+  const isGhPages =
+    typeof window !== 'undefined' &&
+    window.location.pathname.startsWith('/Proofline-hackblox');
+  const basePath = isGhPages ? '/Proofline-hackblox' : '';
   const urls = c.local
-    ? [`/local-metadata/${validated}.json`, `/api/metadata/${validated}`]
+    ? [
+        `${basePath}/local-metadata/${validated}.json`,
+        `/local-metadata/${validated}.json`,
+        `${basePath}/api/metadata/${validated}`,
+        `/api/metadata/${validated}`,
+      ]
     : [
         `https://ipfs.io/ipfs/${validated}`,
         `https://dweb.link/ipfs/${validated}`,
